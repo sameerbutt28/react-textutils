@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 
-export default function About() {
-  const [myStyle, setMyStyle]=useState({
+export default function About() 
+{
+  
+ const [myStyle, setMyStyle]=useState({
     color: 'black',
     backgroundColor: 'white',
     border: '0.2px solid black',
 
   })
-   toogleStyle= ()=>
+   const toogleStyle= ()=>
    {
     if(myStyle.color === 'white')
     {
@@ -24,10 +26,11 @@ export default function About() {
       backgroundColor: 'white',
       border: '0.2px solid black',
     })
-   }
+    }
+   
   
   return (
-    <div className='container my-3' style ={myStyle}>
+    <div className='container' style ={myStyle}>
       <div className="accordion" id="accordionExample" >
   <div className="accordion-item" style ={myStyle}>
     <h2 className="accordion-header" >
@@ -65,9 +68,14 @@ export default function About() {
       </div>
     </div>
   </div>
-</div>
-<button onClick={toogleStyle} className='btn btn-primary my-3' >Enable Dark Mode </button>
+  </div>
+ <button onClick={toogleStyle} className='btn btn-primary my-3' >Enable Dark Mode </button>
 
+   
     </div>
   )
+
+
+
 }
+} 
